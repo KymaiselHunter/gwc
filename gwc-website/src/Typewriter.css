@@ -1,33 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@400;500;600&display=swap');
+
 .typewriter{
     display: flex;
     /* justify-content: center; */
 }
 
-.typewriter p {
-    font-family: monospace;
-    font-size: 1.5rem;
+.typewriter p{
     /* margin-inline: auto; */
     overflow: hidden;
 
     white-space: nowrap;
+    visibility: hidden; /* Hide it before animation starts */
 
     border-right: 1px solid;
-
-    animation: typing 1s steps(22) forwards, blink 1s step-end infinite;
+    border-right-color: transparent;
 }
+
+.typewriter #greeting-girls-who{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 4rem;
+    
+
+    animation: typing .5s steps(9) forwards 250ms, 
+    blink 0.5s step-end 2;
+}
+
+.typewriter #greeting-code{
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    font-size: 6rem;
+    
+
+    animation: typing .5s steps(5) forwards 750ms, 
+    blink 0.5s step-end 3;
+}
+
+.typewriter #greeting-hunter{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+
+    font-size: 6rem;
+    
+
+    animation: typing .5s steps(5) forwards 1250ms, 
+    blink 1s step-end infinite;
+}
+
 
 @keyframes typing{
     from{
         width: 0;
+        visibility: visible;
     }
 
     to{
         width: 100%;
+        visibility: visible;
     }
 }
 
 @keyframes blink{
-    50% {
-        border-color: transparent;
-    }
+    0% { border-color: white; }
+    50% { border-color: transparent; }
+    100% { border-color: white; } 
+
+    
+
 }

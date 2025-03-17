@@ -29,9 +29,17 @@ function Main(){
       '>
         
         <div className='grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-8 place-items-center'>
-          <div className='typewriter'>
+          <div className='typewriter flex flex-col'>
+            <div className='h'>
+              <p id='greeting-girls-who'>Girls Who</p>
+            </div>
+
             <div>
-              <p>CSS Typewrite Effect</p>
+              <p id='greeting-code'>Code</p>
+            </div>
+            
+            <div>
+              <p id='greeting-hunter'>@HUNTER</p>
             </div>
           </div>
           <a href="https://react.dev" target="_blank">
