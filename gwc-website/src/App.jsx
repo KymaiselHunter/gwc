@@ -6,6 +6,8 @@ import Background from './assets/koa5.jpg'
 
 import Navbar from './components/Navbar'
 
+import './Typewriter.css'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -27,9 +29,11 @@ function Main(){
       '>
         
         <div className='grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-8 place-items-center'>
-          <a href="https://vite.dev" target="_blank" >
-            <img src={viteLogo} className="w-80 h-80" alt="Vite logo" />
-          </a>
+          <div className='typewriter'>
+            <div>
+              <p>CSS Typewrite Effect</p>
+            </div>
+          </div>
           <a href="https://react.dev" target="_blank">
             <img src={reactLogo} className="w-80 h-80" alt="React logo"  />
           </a>
