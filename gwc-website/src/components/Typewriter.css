@@ -13,11 +13,13 @@
     visibility: hidden; /* Hide it before animation starts */
 
     border-right: 1px solid;
-    border-right-color: transparent;
+    border-right-color: white;
 }
 
 .typewriter #greeting-girls-who{
     line-height: 1.8;
+
+    width: 20rem;
 }
 
 .typewriter #greeting-girls-who p{
@@ -29,7 +31,8 @@
     
 
     animation: typing .5s steps(9) forwards 250ms, 
-    blink 0.5s step-end 2;
+    disappear 1ms linear forwards 750ms;
+    /* blink 0.5s step-end 2; */
 
     transform: translateY(50%) translate(-1%);
 }
@@ -46,8 +49,8 @@
     font-size: 16rem;
     
 
-    animation: typing .5s steps(5) forwards 750ms, 
-    blink 0.5s step-end 3;
+    animation: typing .5s steps(5) forwards 750ms,
+    disappear 1ms linear forwards 1250ms;
 }
 
 .typewriter #greeting-hunter{
@@ -63,7 +66,7 @@
     
 
     animation: typing .5s steps(5) forwards 1250ms, 
-    blink 1s step-end infinite;
+    blink 1s step-end infinite 1750ms;
 }
 
 
@@ -83,7 +86,13 @@
     0% { border-color: white; }
     50% { border-color: transparent; }
     100% { border-color: white; } 
+}
 
-    
-
+@keyframes disappear{
+    from{
+        border-color: white;
+    }
+    to{
+        border-color: transparent;
+    }
 }
