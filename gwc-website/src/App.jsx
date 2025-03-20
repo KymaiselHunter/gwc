@@ -5,8 +5,7 @@ import viteLogo from '/vite.svg'
 import Background from './assets/koa5.jpg'
 
 import Navbar from './components/Navbar'
-
-import './Typewriter.css'
+import Typewriter from './components/Typewriter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,20 +27,8 @@ function Main(){
       py-20 md:py-32 lg:py-40
       '>
         
-        <div className='grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-8 place-items-center'>
-          <div className='typewriter flex flex-col'>
-            <div className='h'>
-              <p id='greeting-girls-who'>Girls Who</p>
-            </div>
-
-            <div>
-              <p id='greeting-code'>Code</p>
-            </div>
-            
-            <div>
-              <p id='greeting-hunter'>@HUNTER</p>
-            </div>
-          </div>
+        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 place-items-center'>
+          <Typewriter/>
           <a href="https://react.dev" target="_blank">
             <img src={reactLogo} className="w-80 h-80" alt="React logo"  />
           </a>
@@ -62,6 +49,7 @@ function Main(){
     </>
   );
 }
+
 
 
 export default App
