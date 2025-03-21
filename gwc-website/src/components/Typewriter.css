@@ -54,7 +54,7 @@
 }
 
 .typewriter #greeting-hunter{
-    transform: translateY(-40%);
+    transform: translateY(-40%) translateX(-3%);
 }
 
 .typewriter #greeting-hunter p{
@@ -94,5 +94,45 @@
     }
     to{
         border-color: transparent;
+    }
+}
+
+
+/* ====================== */
+/* Responsive design */
+/* ====================== */
+
+@media (max-width: 768px) {
+    .typewriter #greeting-girls-who p {
+        font-size: 4rem;
+        transform: translateY(75%) translateX(-3%);
+    }
+
+    .typewriter #greeting-code p {
+        font-size: 12rem;
+    }
+
+    .typewriter #greeting-hunter p {
+        font-size: 5rem;
+        transform: translateY(-20%) translateX(-6%);
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    .typewriter #greeting-girls-who p {
+        font-size: 3rem;
+
+        transform: translateY(111%) translateX(-8%);
+    }
+
+    .typewriter #greeting-code p {
+        font-size: 8rem;
+    }
+
+    .typewriter #greeting-hunter p {
+        font-size: 4rem;
+        
+        transform: translateY(-50%) translateX(-10%);
     }
 }
