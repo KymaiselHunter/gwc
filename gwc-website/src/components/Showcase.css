@@ -1,0 +1,14 @@
+.showcase-hide {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(100%); /* Optional: Add small movement */
+    /* transition: opacity 1500ms ease-in-out, transform 1500ms ease-in-out; */
+    transition: all 1500ms;
+
+}
+
+.showcase-reveal {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+}

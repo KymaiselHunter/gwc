@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
@@ -6,6 +6,8 @@ import Background from './assets/koa5.jpg'
 
 import Navbar from './components/Navbar'
 import Typewriter from './components/Typewriter'
+import Showcase from './components/Showcase'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,9 +31,7 @@ function Main(){
         
         <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 place-items-center'>
           <Typewriter/>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="w-80 h-80" alt="React logo"  />
-          </a>
+          <Showcase/>
         </div>
         <h1>Vite + React</h1>
         <div className="card">
