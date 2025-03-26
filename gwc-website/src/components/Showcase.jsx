@@ -29,7 +29,7 @@ function Showcase(){
 
     return(
         <>
-            <img ref={elementRef} src={showcasePhoto} className="showcase-hide w-5xl h-auto rounded-3xl drop-shadow-lg" alt="React logo" />
+            <img ref={elementRef} src={showcasePhoto} className="showcase-hide w-full h-auto rounded-3xl drop-shadow-lg" alt="React logo" />
             {/* <img src={reactLogo} className="hide w-80 h-80" alt="React logo" /> */}
         </>
     );

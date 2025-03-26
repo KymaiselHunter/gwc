@@ -25,11 +25,10 @@ function App() {
 function Main(){
   return(
     <>
-      <main className='flex flex-col justify-start items-center w-full px-6 
-      py-20 md:py-32 lg:py-40
-      '>
+      <main className='flex flex-col justify-start items-center w-full px-6 '>
+        {/* // py-20 md:py-32 lg:py-40 */}
         
-        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 place-items-center'>
+        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 place-items-center'>
           <Typewriter/>
           <Showcase/>
         </div>

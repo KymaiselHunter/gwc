@@ -4,7 +4,7 @@ function Typewriter()
 {
   return(
     <>
-      <div className='typewriter flex flex-col'>
+      <div className='typewriter flex flex-col justify-center'>
         <div id='greeting-girls-who'>
           <p >girls who</p>
         </div>
