@@ -7,6 +7,7 @@ import Background from './assets/koa5.jpg'
 import Navbar from './components/Navbar'
 import Typewriter from './components/Typewriter'
 import Showcase from './components/Showcase'
+import EBoard from './components/EBoard'
 
 
 function App() {
@@ -44,6 +45,8 @@ function Main(){
         <p className="read-the-docs">
           Click on the Vite and React logos to learn more
         </p>
+
+        <EBoard/>
       </main>
     </>
   );

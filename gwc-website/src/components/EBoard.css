@@ -1,0 +1,27 @@
+.eBoard{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.eBoardCard{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    height: 300px;
+    width: 250px;
+
+    min-width: 100px;
+    padding: 1.5rem;
+
+    border-radius: 16px;
+    background-color:blueviolet;
+    box-shadow: 0 0 1rem black;
+}
+
+.MemberPhoto{
+    height: 90%;
+    display: block;
+    object-fit: contain; /* or 'scale-down' if needed */
+
+}
