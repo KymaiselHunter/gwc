@@ -10,25 +10,26 @@
     overflow-x: scroll;
 
     width: 100%;
-    
+
+    user-select: none;
+    -webkit-user-drag: none;
+
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE and Edge */
+ 
+    /* 
+        disabling scroll
+        (doesn't do any thing
+        but i want the event listeners
+        to handle all of it)
+    */
+    overscroll-behavior-x: none;
+
 }
 
 .eBoard::-webkit-scrollbar{
-    width: 10px;
-    height: 20px;
-
+    display: none;               /* Chrome, Safari */
 }
-
-.eBoard::-webkit-scrollbar-thumb {
-    background: #201c29;
-    border-radius: 10px;
-    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
-}
-
-/* .eBoard::-webkit-scrollbar-track {
-    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
-} */
-
 
 .eBoardCard{
     display: flex;
@@ -47,20 +48,7 @@
     box-shadow: -.5rem 0 1.5rem black;
 
     transition: 200ms;
-    /* height: 350px;
-    width: 400px;
-    min-width: 250px;
-    padding: 1.5rem;
-    border-radius: 16px;
-    background: #17141d;
-    box-shadow: -1rem 0 3rem #000;
-    display: flex;
-    flex-direction: column;
-    transition: .2s;
-    margin: 0;
-    scroll-snap-align: start;
-    clear: both;
-    position: relative; */
+
 }
 
 .eBoardCard:focus-within~.eBoardCard, .eBoardCard:hover~.eBoardCard {
