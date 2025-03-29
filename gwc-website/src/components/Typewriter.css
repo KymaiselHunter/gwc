@@ -2,6 +2,7 @@
 
 .typewriter{
     display: flex;
+    user-select: none;
     /* justify-content: center; */
 }
 

@@ -26,25 +26,16 @@ function App() {
 function Main(){
   return(
     <>
-      <main className='flex flex-col justify-start items-center w-full px-6 '>
+      <main className='flex flex-col justify-start items-center w-full  '>
         {/* // py-20 md:py-32 lg:py-40 */}
         
-        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 place-items-center'>
+        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 place-items-center'
+          style={{height: "60vh"}}
+        >
           <Typewriter/>
           <Showcase/>
         </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          {/* <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button> */}
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
+
 
         <EBoard/>
       </main>

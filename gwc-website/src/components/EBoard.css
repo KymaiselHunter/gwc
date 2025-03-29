@@ -25,6 +25,9 @@
     */
     overscroll-behavior-x: none;
 
+    padding-left: 0px;
+    padding-right: 0px;
+
 }
 
 .eBoard::-webkit-scrollbar{

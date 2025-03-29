@@ -153,27 +153,6 @@ function EBoard()
         cancelAnimationFrame(animationFrame.current);
         smoothScrollToTarget();
       };
-      
-      //code below was a handlemove that was a little bit more accurate to
-      // will remove after this commit since the newer one works better and
-      // it's simple
-      //   const handleOnMove = (e) => {
-    //     if (mouseDownAt.current === 0) return;
-    
-    //     const mouseDelta = mouseDownAt.current - e.clientX;
-    //     const deltaPercent = mouseDelta / window.innerWidth;
-    
-    //     const track = trackRef.current;
-    //     const maxScroll = track.scrollWidth - track.clientWidth;
-    //     const scrollAmount = deltaPercent * maxScroll;
-    
-    //     const RANDOM_MULTIPLIER =3;
-    //     targetScroll.current = prevPercentage.current + scrollAmount*RANDOM_MULTIPLIER;
-    
-    //     // Cancel old frame and start new animation
-    //     cancelAnimationFrame(animationFrame.current);
-    //     smoothScrollToTarget();
-    //   };
 
     useEffect(() => {
         const handleTouchStart = (e) => handleOnDown(e.touches[0]);
