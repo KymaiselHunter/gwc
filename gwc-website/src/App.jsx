@@ -9,6 +9,7 @@ import Typewriter from './components/Typewriter'
 import Showcase from './components/Showcase'
 import EBoard from './components/EBoard'
 
+import UploadForm from './components/UploadForm';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,11 +34,12 @@ function Main(){
           style={{height: "60vh"}}
         >
           <Typewriter/>
-          <Showcase/>
+          {/* <Showcase/> */}
         </div>
 
 
-        <EBoard/>
+        {/* <EBoard/> */}
+        <UploadForm></UploadForm>
       </main>
     </>
   );
