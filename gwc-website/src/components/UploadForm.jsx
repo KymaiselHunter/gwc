@@ -26,9 +26,47 @@ function UploadForm()
         setPreviewUrl(URL.createObjectURL(selectedFile));
     }
 
-    function handleUpload()
+    async function handleUpload()
     {
-        alert("Upload fronted works");
+        if(!file) {
+            alert('failed upload: no file to upload');
+            return;
+        }
+
+        const fileName = encodeURIComponent(file.name);
+        const fileType = encodeURIComponent(file.type);
+
+        try{
+            const res = await fetch(`https://pw4w2ow7rd.execute-api.us-east-1.amazonaws.com/presign?fileName=${fileName}&fileType=${fileType}`);
+            
+            if(!res.ok)
+            {
+                throw new Error(`Failed to get presigned URL. Status ${res.status}`)
+            }
+
+            const {uploadUrl, key} = await res.json();
+    
+            if (!uploadUrl) {
+               throw new Error('Presigned URL missing from response');
+            }
+            console.log('Uploading to:', uploadUrl);
+
+            const putRes = await fetch(uploadUrl, {
+                method: 'PUT',
+                headers: {'Content-Type' : file.type},
+                body: file,
+            });
+
+            if (!putRes.ok) {
+                throw new Error(`S3 upload failed. Status: ${putRes.status}`);
+            }
+            alert("UPLOAD SUCCESSFUL")
+        }
+        catch (err) {
+            alert(`[Upload Error] ${err}`);
+            console.error('[Upload Error]', err);
+        }
+
     }
 
     return(
@@ -42,7 +80,7 @@ function UploadForm()
             )}
             <button
                 onClick={handleUpload}
-                disabled={!file}
+                // disabled={!file}
                 style={{marginTop: '1rem'}}
             >
                 Uppie
