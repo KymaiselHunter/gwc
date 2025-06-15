@@ -21,9 +21,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        working-directory: ./gwc-website
 
       - name: Build frontend
         run: npm run build
+        working-directory: ./gwc-website        
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
