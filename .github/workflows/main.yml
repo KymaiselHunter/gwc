@@ -43,7 +43,7 @@ jobs:
         run: |
           aws cloudfront create-invalidation \
             --distribution-id E3QC8ZYKMWTFZK \
-            --paths "/main/*"
+            --paths "/*"
 
   deploy-production:
     if: github.ref == 'refs/heads/production'
@@ -81,4 +81,4 @@ jobs:
         run: |
           aws cloudfront create-invalidation \
             --distribution-id E2JL96CDD94QFC \
-            --paths "/production/*"
+            --paths "/*"
