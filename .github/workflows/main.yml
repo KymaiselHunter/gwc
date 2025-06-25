@@ -37,12 +37,12 @@ jobs:
 
       - name: Upload to S3
         run: |
-          aws s3 sync ./gwc-website/dist/ s3://gwc-club-site/main --delete
+          aws s3 sync ./test-site-for-hunter-kyle/dist/ s3://test-site-for-hunter-kyle/main --delete
 
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id E3QC8ZYKMWTFZK \
+            --distribution-id ${{ secrets.DISTRIBUTION_ID_STAGING }} \
             --paths "/*"
 
   deploy-production:
@@ -75,10 +75,10 @@ jobs:
 
       - name: Upload to S3
         run: |
-          aws s3 sync ./gwc-website/dist/ s3://gwc-club-site/production --delete
+          aws s3 sync ./test-site-for-hunter-kyle/dist/ s3://test-site-for-hunter-kyle/production --delete
 
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id E2JL96CDD94QFC \
+            --distribution-id ${{ secrets.DISTRIBUTION_ID_PRODUCTION }} \
             --paths "/*"
